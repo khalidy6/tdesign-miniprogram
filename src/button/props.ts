@@ -17,12 +17,11 @@ const props: TdButtonProps = {
   },
   /** 自定义 dataset，可通过 event.currentTarget.dataset.custom 获取 */
   customDataset: {
-    type: null,
+    type: Object,
   },
-  /** 是否禁用按钮 */
+  /** 禁用状态 */
   disabled: {
     type: Boolean,
-    value: false,
   },
   /** 组件类名 */
   externalClasses: {
@@ -47,10 +46,6 @@ const props: TdButtonProps = {
   loading: {
     type: Boolean,
     value: false,
-  },
-  /** 加载loading样式 */
-  loadingProps: {
-    type: Object,
   },
   /** 按钮形状，有 4 种：长方形、正方形、圆角长方形、圆形 */
   shape: {
