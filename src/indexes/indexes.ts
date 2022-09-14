@@ -56,9 +56,7 @@ export default class IndexBar extends SuperComponent {
           {
             clientHeight: res.windowHeight,
           },
-          () => {
-            this.getDomInfo();
-          },
+          this.getDomInfo,
         );
       },
     });
