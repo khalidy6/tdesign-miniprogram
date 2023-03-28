@@ -59,6 +59,11 @@ const props: TdCellProps = {
   rightIcon: {
     type: String,
   },
+  /** 自定义组件样式 */
+  style: {
+    type: String,
+    value: '',
+  },
   /** 标题 */
   title: {
     type: String,

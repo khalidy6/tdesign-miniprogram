@@ -6,14 +6,6 @@
 
 export interface TdEmptyProps {
   /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
    * 描述文字
    */
   description?: {
@@ -32,13 +24,21 @@ export interface TdEmptyProps {
    * @default ''
    */
   icon?: {
-    type: null;
-    value?: string | object;
+    type: StringConstructor;
+    value?: string;
   };
   /**
    * 图片地址
    */
   image?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
+   * 自定义组件样式
+   * @default ''
+   */
+  style?: {
     type: StringConstructor;
     value?: string;
   };

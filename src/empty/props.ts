@@ -16,11 +16,17 @@ const props: TdEmptyProps = {
   },
   /** 图标名称 */
   icon: {
-    type: null,
+    type: String,
+    value: '',
   },
   /** 图片地址 */
   image: {
     type: String,
+  },
+  /** 自定义组件样式 */
+  style: {
+    type: String,
+    value: '',
   },
 };
 

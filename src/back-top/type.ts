@@ -6,14 +6,6 @@
 
 export interface TdBackTopProps {
   /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
    * 组件类名，分别用于设置外层元素、图标、文本内容等元素类名
    */
   externalClasses?: {
@@ -30,11 +22,19 @@ export interface TdBackTopProps {
   };
   /**
    * 图标
-   * @default true
+   * @default 'backtop'
    */
   icon?: {
-    type: null;
-    value?: boolean | string | object;
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
+   * 自定义组件样式
+   * @default ''
+   */
+  style?: {
+    type: StringConstructor;
+    value?: string;
   };
   /**
    * 文案

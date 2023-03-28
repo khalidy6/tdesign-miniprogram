@@ -1,41 +1,4 @@
----
-title: Sticky 吸顶
-description: 用于常驻页面顶部的信息、操作展示。
-spline: data
-isComponent: true
----
-
-<span class="coverages-badge" style="margin-right: 10px"><img src="https://img.shields.io/badge/coverages%3A%20lines-87%25-blue" /></span><span class="coverages-badge" style="margin-right: 10px"><img src="https://img.shields.io/badge/coverages%3A%20functions-90%25-blue" /></span><span class="coverages-badge" style="margin-right: 10px"><img src="https://img.shields.io/badge/coverages%3A%20statements-84%25-blue" /></span><span class="coverages-badge" style="margin-right: 10px"><img src="https://img.shields.io/badge/coverages%3A%20branches-79%25-red" /></span>
-## 引入
-
-全局引入，在 miniprogram 根目录下的`app.json`中配置，局部引入，在需要引入的页面或组件的`index.json`中配置。
-
-```json
-"usingComponents": {
-  "t-sticky": "tdesign-miniprogram/sticky/sticky"
-}
-```
-
-## 代码演示
-
-将内容包裹在 `Sticky` 组件内
-
-<img src="https://tdesign.gtimg.com/miniprogram/readme/sticky.gif" width="375px" height="50%">
-
-### 基础吸顶
-
-{{ base }}
-
-
-### 吸顶距离
-
-{{ offset }}
-
-### 指定容器
-
-{{ container }}
-
-
+:: BASE_DOC ::
 
 ## API
 ### Sticky Props
@@ -46,6 +9,7 @@ container | Function | - | 函数返回容器对应的 NodesRef 节点，将对�
 disabled | Boolean | false | 是否禁用组件 | N
 external-classes | Array | - | 根结点外部样式。`['t-class']` | N
 offset-top | String / Number | 0 | 吸顶时与顶部的距离，单位`px` | N
+style | String | - | 自定义组件样式 | N
 z-index | Number | 99 | 吸顶时的 z-index | N
 
 ### Sticky Events

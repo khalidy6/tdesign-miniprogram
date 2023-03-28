@@ -6,21 +6,28 @@
 
 export interface TdImageViewerProps {
   /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
    * 遮罩的背景颜色
    * @default rgba(0, 0, 0, .6)
    */
   backgroundColor?: {
-    type: StringConstructor;
-    optionalTypes: Array<NumberConstructor>;
+    type: null;
     value?: string | number;
+  };
+  /**
+   * 是否展示关闭按钮，值为 `true` 显示默认关闭按钮；值为 `false` 则不显示关闭按钮；也可以完全自定义关闭按钮
+   * @default true
+   */
+  closeBtn?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
+  /**
+   * 是否显示删除操作
+   * @default false
+   */
+  deleteBtn?: {
+    type: BooleanConstructor;
+    value?: boolean;
   };
   /**
    * 图片数组
@@ -31,12 +38,20 @@ export interface TdImageViewerProps {
     value?: Array<string>;
   };
   /**
-   * 默认展示第几项
+   * 初始化页码
    * @default 0
    */
   initialIndex?: {
     type: NumberConstructor;
-    value?: number;
+    value?: Number;
+  };
+  /**
+   * 最大放大比例
+   * @default 3
+   */
+  maxZoom?: {
+    type: NumberConstructor;
+    value?: Number;
   };
   /**
    * 是否显示页码
@@ -46,15 +61,13 @@ export interface TdImageViewerProps {
     type: BooleanConstructor;
     value?: boolean;
   };
-  /** 是否显示删除操作 */
-  deleteBtn?: {
-    type: null;
-    value?: boolean | string | object;
-  };
-  /** 是否显示关闭操作 */
-  closeBtn?: {
-    type: null;
-    value?: boolean | string | object;
+  /**
+   * 自定义组件样式
+   * @default ''
+   */
+  style?: {
+    type: StringConstructor;
+    value?: string;
   };
   /**
    * 隐藏/显示预览

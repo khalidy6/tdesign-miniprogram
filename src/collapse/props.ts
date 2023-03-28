@@ -25,10 +25,10 @@ const props: TdCollapseProps = {
     type: Boolean,
     value: false,
   },
-  /** 折叠面板风格 */
-  theme: {
+  /** 自定义组件样式 */
+  style: {
     type: String,
-    value: 'default',
+    value: '',
   },
   /** 展开的面板集合 */
   value: {

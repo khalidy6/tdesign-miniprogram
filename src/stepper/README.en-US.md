@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Stepper Props
 
 name | type | default | description | required
@@ -13,6 +12,7 @@ input-width | Number | - | \- | N
 max | Number | 100 | \- | N
 min | Number | 0 | \- | N
 step | Number | 1 | \- | N
+style | String | - | \- | N
 theme | String | normal | stylish。options：normal/grey | N
 value | String / Number | 0 | \- | N
 default-value | String / Number | undefined | uncontrolled property | N
