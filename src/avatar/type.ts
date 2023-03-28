@@ -23,27 +23,11 @@ export interface TdAvatarProps {
     value?: BadgeProps;
   };
   /**
-   * 是否显示外边框
-   * @default false
-   */
-  bordered?: {
-    type: BooleanConstructor;
-    value?: boolean;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
    * 组件类名，用于设置组件外层元素类名
    */
   externalClasses?: {
     type: ArrayConstructor;
-    value?: ['t-class', 't-class-image', 't-class-icon', 't-class-alt', 't-class-content'];
+    value?: ['t-class'];
   };
   /**
    * 加载失败时隐藏图片
@@ -54,11 +38,11 @@ export interface TdAvatarProps {
     value?: boolean;
   };
   /**
-   * 图标。值为字符串表示图标名称，值为 `Object` 类型，表示透传至 `icon`。
+   * 图标
    */
   icon?: {
-    type: null;
-    value?: string | object;
+    type: StringConstructor;
+    value?: string;
   };
   /**
    * 图片地址
@@ -84,13 +68,71 @@ export interface TdAvatarProps {
     value?: ShapeEnum;
   };
   /**
-   * 尺寸，示例值：small/medium/large/24px/38px 等
+   * 尺寸，示例值：small/medium/large/24px/38px 等，默认为 large
+   * @default ''
+   */
+  size?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
+   * 自定义组件样式
+   * @default ''
+   */
+  style?: {
+    type: StringConstructor;
+    value?: string;
+  };
+}
+
+export interface TdAvatarGroupProps {
+  /**
+   * 图片之间的层叠关系，可选值：左侧图片在上和右侧图片在上
+   * @default 'right-up'
+   */
+  cascading?: {
+    type: StringConstructor;
+    value?: CascadingValue;
+  };
+  /**
+   * 头像数量超出时，会出现一个头像折叠元素。该元素内容可自定义。默认为 `+N`。示例：`+5`，`...`, `更多`
+   */
+  collapseAvatar?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
+   * 组件类名，用于设置组件外层元素类名
+   */
+  externalClasses?: {
+    type: ArrayConstructor;
+    value?: ['t-class', 't-class-image', 't-class-content'];
+  };
+  /**
+   * 能够同时显示的最多头像数量
+   */
+  max?: {
+    type: NumberConstructor;
+    value?: number;
+  };
+  /**
+   * 尺寸，示例值：small/medium/large/24px/38px 等。优先级低于 Avatar.size
    * @default medium
    */
   size?: {
     type: StringConstructor;
     value?: string;
   };
+  /**
+   * 自定义组件样式
+   * @default ''
+   */
+  style?: {
+    type: StringConstructor;
+    value?: string;
+  };
 }
 
 export type ShapeEnum = 'circle' | 'round';
+
+export type CascadingValue = 'left-up' | 'right-up';

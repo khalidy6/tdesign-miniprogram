@@ -64,6 +64,11 @@ const props: TdUploadProps = {
     type: String,
     value: 'media',
   },
+  /** 自定义组件样式 */
+  style: {
+    type: String,
+    value: '',
+  },
 };
 
 export default props;

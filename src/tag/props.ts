@@ -22,7 +22,8 @@ const props: TdTagProps = {
   },
   /** 标签中的图标，可自定义图标呈现 */
   icon: {
-    type: null,
+    type: String,
+    value: '',
   },
   /** 标签最大宽度，宽度超出后会出现省略号。示例：'50px' / 80 */
   maxWidth: {
@@ -37,6 +38,11 @@ const props: TdTagProps = {
   size: {
     type: String,
     value: 'medium',
+  },
+  /** 自定义组件样式 */
+  style: {
+    type: String,
+    value: '',
   },
   /** 组件风格，用于描述组件不同的应用场景 */
   theme: {

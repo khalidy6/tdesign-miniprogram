@@ -17,6 +17,7 @@ left-icon | String / Slot | - | \- | N
 note | String / Slot | - | \- | N
 required | Boolean | false | \- | N
 right-icon | String / Slot | - | \- | N
+style | String | - | \- | N
 title | String / Slot | - | \- | N
 url | String | - | \- | N
 

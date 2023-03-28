@@ -3,6 +3,9 @@
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
+
+import { TNode } from '../common/common';
+
 export interface TdDateTimePickerProps {
   /**
    * 取消按钮文字
@@ -35,8 +38,16 @@ export interface TdDateTimePickerProps {
     value?: ['t-class', 't-class-confirm', 't-class-cancel', 't-class-title'];
   };
   /**
-   * 用于格式化日期，[详细文档](https://day.js.org/docs/en/display/format)
-   * @default ''
+   * 底部内容
+   * @default true
+   */
+  footer?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
+  /**
+   * 用于pick、change、confirm事件参数格式化[详细文档](https://day.js.org/docs/en/display/format)
+   * @default 'YYYY-MM-DD HH:mm:ss'
    */
   format?: {
     type: StringConstructor;
@@ -74,8 +85,16 @@ export interface TdDateTimePickerProps {
     value?: string | number;
   };
   /**
-   * 标题
+   * 自定义组件样式
    * @default ''
+   */
+  style?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
+   * 标题
+   * @default '选择时间'
    */
   title?: {
     type: StringConstructor;
