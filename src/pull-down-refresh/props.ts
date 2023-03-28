@@ -12,8 +12,7 @@ const props: TdPullDownRefreshProps = {
   },
   /** 加载中下拉高度，如果值为数字则单位是：'px' */
   loadingBarHeight: {
-    type: String,
-    optionalTypes: [Number],
+    type: null,
     value: 50,
   },
   /** 加载loading样式 */
@@ -27,14 +26,18 @@ const props: TdPullDownRefreshProps = {
   },
   /** 最大下拉高度，如果值为数字则单位是：'px' */
   maxBarHeight: {
-    type: String,
-    optionalTypes: [Number],
+    type: null,
     value: 80,
   },
   /** 刷新超时时间 */
   refreshTimeout: {
     type: Number,
     value: 3000,
+  },
+  /** 自定义组件样式 */
+  style: {
+    type: String,
+    value: '',
   },
   /** 组件状态，值为 `true` 表示下拉状态，值为 `false` 表示收起状态 */
   value: {

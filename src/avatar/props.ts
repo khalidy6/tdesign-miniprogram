@@ -15,11 +15,6 @@ const props: TdAvatarProps = {
   badgeProps: {
     type: Object,
   },
-  /** 是否显示外边框 */
-  bordered: {
-    type: Boolean,
-    value: false,
-  },
   /** 组件类名，用于设置组件外层元素类名 */
   externalClasses: {
     type: Array,
@@ -29,9 +24,9 @@ const props: TdAvatarProps = {
     type: Boolean,
     value: false,
   },
-  /** 图标。值为字符串表示图标名称，值为 `Object` 类型，表示透传至 `icon`。 */
+  /** 图标 */
   icon: {
-    type: null,
+    type: String,
   },
   /** 图片地址 */
   image: {
@@ -47,10 +42,15 @@ const props: TdAvatarProps = {
     type: String,
     value: 'circle',
   },
-  /** 尺寸，示例值：small/medium/large/24px/38px 等 */
+  /** 尺寸，示例值：small/medium/large/24px/38px 等，默认为 large */
   size: {
     type: String,
-    value: 'medium',
+    value: '',
+  },
+  /** 自定义组件样式 */
+  style: {
+    type: String,
+    value: '',
   },
 };
 

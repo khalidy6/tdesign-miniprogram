@@ -9,36 +9,13 @@ export interface TdNoticeBarProps {
    * 文本内容
    */
   content?: {
-    type: null;
-    value?: null;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
     type: StringConstructor;
     value?: string;
   };
   /**
-   * 滚动方向，可选 horizontal、vertical
-   * @default horizontal
-   */
-  direction?: {
-    type: StringConstructor;
-    value?: 'horizontal' | 'vertical';
-  };
-  /**
-   * 组件类名，分别用于设置 组件外层元素、文本内容、前缀图标、右侧额外信息、后缀图标 等元素类名。
-   */
-  externalClasses?: {
-    type: ArrayConstructor;
-    value?: ['t-class', 't-class-content', 't-class-prefix-icon', 't-class-operation', 't-class-suffix-icon'];
-  };
-  /**
    * 右侧额外信息
    */
-  operation?: {
+  extra?: {
     type: StringConstructor;
     value?: string;
   };
@@ -52,18 +29,27 @@ export interface TdNoticeBarProps {
   };
   /**
    * 前缀图标
-   * @default true
+   * @default ''
    */
   prefixIcon?: {
-    type: null;
-    value?: boolean | string | object;
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
+   * 自定义组件样式
+   * @default ''
+   */
+  style?: {
+    type: StringConstructor;
+    value?: string;
   };
   /**
    * 后缀图标
+   * @default ''
    */
   suffixIcon?: {
-    type: null;
-    value?: string | object;
+    type: StringConstructor;
+    value?: string;
   };
   /**
    * 内置主题

@@ -8,14 +8,6 @@ import { LoadingProps } from '../loading/index';
 
 export interface TdPullDownRefreshProps {
   /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
    * 加载loading样式
    */
   externalClasses?: {
@@ -27,8 +19,7 @@ export interface TdPullDownRefreshProps {
    * @default 50
    */
   loadingBarHeight?: {
-    type: StringConstructor;
-    optionalTypes: Array<NumberConstructor>;
+    type: null;
     value?: string | number;
   };
   /**
@@ -51,8 +42,7 @@ export interface TdPullDownRefreshProps {
    * @default 80
    */
   maxBarHeight?: {
-    type: StringConstructor;
-    optionalTypes: Array<NumberConstructor>;
+    type: null;
     value?: string | number;
   };
   /**
@@ -62,6 +52,14 @@ export interface TdPullDownRefreshProps {
   refreshTimeout?: {
     type: NumberConstructor;
     value?: number;
+  };
+  /**
+   * 自定义组件样式
+   * @default ''
+   */
+  style?: {
+    type: StringConstructor;
+    value?: string;
   };
   /**
    * 组件状态，值为 `true` 表示下拉状态，值为 `false` 表示收起状态

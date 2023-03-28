@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Loading Props
 
 name | type | default | description | required
@@ -17,5 +16,6 @@ pause | Boolean | false | \- | N
 progress | Number | - | \- | N
 reverse | Boolean | - | \- | N
 size | String | '40rpx' | \- | N
+style | String | - | \- | N
 text | String / Slot | - | \- | N
-theme | String | circular | options：circular/spinner/dots | N
+theme | String | circular | options：circular/spinner/bar/error/dots | N
