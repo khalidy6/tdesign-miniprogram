@@ -30,14 +30,6 @@ export interface TdCellProps {
     value?: boolean;
   };
   /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
    * 下方内容描述
    */
   description?: {
@@ -108,6 +100,14 @@ export interface TdCellProps {
    * 最右侧图标
    */
   rightIcon?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
+   * 自定义组件样式
+   * @default ''
+   */
+  style?: {
     type: StringConstructor;
     value?: string;
   };

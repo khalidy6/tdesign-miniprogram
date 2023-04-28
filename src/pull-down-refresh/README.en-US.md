@@ -11,8 +11,9 @@ loading-props | Object | - | Typescript：`LoadingProps`，[Loading API Document
 loading-texts | Array | [] | Typescript：`string[]` | N
 max-bar-height | String / Number | 80 | \- | N
 refresh-timeout | Number | 3000 | \- | N
+style | String | - | \- | N
 value | Boolean | false | \- | N
-default-value | Boolean | false | uncontrolled property | N
+default-value | Boolean | undefined | uncontrolled property | N
 
 ### PullDownRefresh Events
 
@@ -20,5 +21,4 @@ name | params | description
 -- | -- | --
 change | `(value: boolean)` | \-
 refresh | \- | \-
-scrolltolower | \- | \-
 timeout | \- | \-

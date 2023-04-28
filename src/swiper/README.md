@@ -1,59 +1,4 @@
----
-title: Swiper 轮播图
-description: 用于循环轮播一组图片或内容，也可以滑动进行切换，轮播动效时间可以设置。
-spline: message
-isComponent: true
----
-
-<span class="coverages-badge" style="margin-right: 10px"><img src="https://img.shields.io/badge/coverages%3A%20lines-95%25-blue" /></span><span class="coverages-badge" style="margin-right: 10px"><img src="https://img.shields.io/badge/coverages%3A%20functions-94%25-blue" /></span><span class="coverages-badge" style="margin-right: 10px"><img src="https://img.shields.io/badge/coverages%3A%20statements-95%25-blue" /></span><span class="coverages-badge" style="margin-right: 10px"><img src="https://img.shields.io/badge/coverages%3A%20branches-90%25-blue" /></span>
-## 引入
-
-全局引入，在 miniprogram 根目录下的`app.json`中配置，局部引入，在需要引入的页面或组件的`index.json`中配置。
-
-```json
-"usingComponents": {
-  "t-swiper": "tdesign-miniprogram/swiper/swiper",
-  "t-swiper-nav": "tdesign-miniprogram/swiper-nav/swiper-nav",
-}
-```
-
-### 组件说明
-
-从 `0.32.0` 版本开始，依赖原生 `swiper` 组件实现，移除了 `swiper-item` 组件，新增了 `list` 属性；
-
-## 代码演示
-
-多种轮播样式，通过 `navigation` 设置导航样式，没有值则不显示，也可以自定义 `nav` 组件
-
-<img src="https://tdesign.gtimg.com/miniprogram/readme/swiper.gif" width="375px" height="50%">
-
-### 组件类型
-
-#### 点状（dots）轮播图
-
-{{ base }}
-
-#### 点条状（dots-bar）轮播图
-
-{{ custom }}
-
-#### 分式（fraction）导航器轮播图
-
-{{ fraction }}
-
-#### 切换按钮（controls）轮播图
-
-{{ nav-btn }}
-
-#### 卡片式（cards）轮播图
-
-{{ cards }}
-
-### 组件样式
-
-#### 垂直模式
-
-{{ vertical }}
+:: BASE_DOC ::
 
 ## API
 ### Swiper Props
@@ -69,7 +14,7 @@ easing-function | String | default | `0.32.0`。指定 swiper 切换缓动动画
 height | String / Number | 192 | 轮播的高度；默认单位 `px` | N
 image-props | Object | - | `0.34.0`。透传至 Image 组件 | N
 interval | Number | 5000 | 轮播间隔时间 | N
-list | Array | - | `0.32.0`。图片列表。TS 类型：`string[]` | N
+list | Array | - | `0.32.0`。图片列表。TS 类型：`string[] \| SwiperList[]` `interface SwiperList { value: string, ariaLabel: string }`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/swiper/type.ts) | N
 loop | Boolean | true | 是否循环播放 | N
 navigation | Boolean / Object / Slot | true | 导航器全部配置，true 的话使用默认配置。TS 类型：`SwiperNavProps \| boolean`，[SwiperNav API Documents](./swiper-nav?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/swiper/type.ts) | N
 next-margin | String / Number | 0 | `0.32.0`。后边距，可用于露出后一项的一小部分。默认单位 `px` | N

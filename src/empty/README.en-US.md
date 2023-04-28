@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Empty Props
 
 name | type | default | description | required
@@ -9,5 +8,6 @@ name | type | default | description | required
 action | Slot | - | \- | N
 description | String / Slot | - | \- | N
 external-classes | Array | - | `['t-class', 't-class-description', 't-class-image', 't-class-actions']` | N
-icon | String | - | \- | N
+icon | String / Object | - | \- | N
 image | String / Slot | - | \- | N
+style | String | - | \- | N

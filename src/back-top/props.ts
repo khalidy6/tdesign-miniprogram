@@ -17,8 +17,13 @@ const props: TdBackTopProps = {
   },
   /** 图标 */
   icon: {
-    type: null,
-    value: true,
+    type: String,
+    value: 'backtop',
+  },
+  /** 自定义组件样式 */
+  style: {
+    type: String,
+    value: '',
   },
   /** 文案 */
   text: {
