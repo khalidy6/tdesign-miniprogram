@@ -17,7 +17,7 @@ export interface TdSwiperNavProps {
    * 自定义组件样式
    * @default ''
    */
-  style?: {
+  customStyle?: {
     type: StringConstructor;
     value?: string;
   };

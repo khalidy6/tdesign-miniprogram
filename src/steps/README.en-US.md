@@ -28,7 +28,7 @@ name | type | default | description | required
 content | String / Slot | '' | \- | N
 external-classes | Array | - | `['t-class', 't-class-content', 't-class-title', 't-class-description', 't-class-extra']` | N
 icon | String / Slot | - | \- | N
-status | String | default | options：default/process/finish/error。Typescript：`StepStatus` `type StepStatus = 'default' \| 'process' \| 'finish' \| 'error'`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/step-item/type.ts) | N
+status | String | default | options：default/process/finish/error。Typescript：`StepStatus` `type StepStatus = 'default' \| 'process' \| 'finish' \| 'error'`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/steps/type.ts) | N
 style | String | - | \- | N
-sub-step-items | Array | [] | Typescript：`SubStepItem[]` `interface SubStepItem { status: StepStatus, title: string }`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/step-item/type.ts) | N
+sub-step-items | Array | [] | Typescript：`SubStepItem[]` `interface SubStepItem { status: StepStatus, title: string }`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/steps/type.ts) | N
 title | String / Slot | '' | \- | N

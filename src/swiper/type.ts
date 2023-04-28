@@ -27,7 +27,7 @@ export interface TdSwiperProps {
    * 自定义组件样式
    * @default ''
    */
-  style?: {
+  customStyle?: {
     type: StringConstructor;
     value?: string;
   };
@@ -91,7 +91,7 @@ export interface TdSwiperProps {
    */
   list?: {
     type: ArrayConstructor;
-    value?: string[];
+    value?: string[] | SwiperList[];
   };
   /**
    * 是否循环播放
@@ -141,4 +141,9 @@ export interface TdSwiperProps {
     type: BooleanConstructor;
     value?: boolean;
   };
+}
+
+export interface SwiperList {
+  value: string;
+  ariaLabel: string;
 }
