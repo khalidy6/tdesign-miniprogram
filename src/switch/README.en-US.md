@@ -5,10 +5,10 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+colors | Array | - | Typescript：`string[]` | N
 custom-value | Array | [true, false] | Typescript：`Array<SwitchValue>` | N
 disabled | Boolean | false | \- | N
-icon | Array | [] | Typescript：`string[]` | N
-label | Array | [] | Typescript：`string[]` | N
+label | String | '' | \- | N
 loading | Boolean | false | \- | N
 size | String | medium | options：small/medium/large | N
 style | String | - | \- | N

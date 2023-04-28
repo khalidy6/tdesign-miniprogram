@@ -1,14 +1,12 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Input Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
 align | String | left | options：left/center/right | N
-layout | String | horizontal | options：vertical/horizontal | N
-borderless | Boolean | true | \- | N
+borderless | Boolean | false | \- | N
 clearable | Boolean | false | \- | N
 disabled | Boolean | - | \- | N
 error-message | String | - | `deprecated` | N
@@ -22,6 +20,7 @@ prefix-icon | String / Slot | - | \- | N
 readonly | Boolean | false | \- | N
 size | String | small | options：small/medium。Typescript：`'medium' \| 'small'` | N
 status | String | default | options：default/success/warning/error | N
+style | String | - | \- | N
 suffix | String / Slot | - | \- | N
 suffix-icon | String / Slot | - | \- | N
 tips | String / Slot | - | \- | N
@@ -48,6 +47,15 @@ safe-password-time-stamp | Number | - | \- | N
 safe-password-nonce | String | - | \- | N
 safe-password-salt | String | - | \- | N
 safe-password-custom-hash | String | - | \- | N
+bindinput | Eventhandle | - | required | Y
+bindfocus | Eventhandle | - | required | Y
+bindblur | Eventhandle | - | required | Y
+bindconfirm | Eventhandle | - | required | Y
+bindkeyboardheightchange | Eventhandle | - | required | Y
+type | 除 safe-password、nickname 外都支持 | - | required | Y
+placeholder-style | 需传入对象，格式为 `{ fontSize: number, fontWeight: string, color: string }` | - | required | Y
+placeholder-class | 不支持 | - | required | Y
+
 ### Input Events
 
 name | params | description
@@ -57,4 +65,4 @@ change | `(value: InputValue, cursor: number, keyCode: number)` | \-
 clear | \- | \-
 enter | `(value: InputValue)` | \-
 focus | `(value: InputValue)` | \-
-keyboardheightchange | `(height: number, duration: number)` | \-
+validate | `(detail: { error?: 'exceed-maximum' \| 'below-minimum' })` | trigger on text length being over max length or max character

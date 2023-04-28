@@ -58,6 +58,11 @@ const props: TdLoadingProps = {
     type: String,
     value: '40rpx',
   },
+  /** 自定义组件样式 */
+  style: {
+    type: String,
+    value: '',
+  },
   /** 加载提示文案 */
   text: {
     type: String,
